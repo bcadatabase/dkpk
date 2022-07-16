@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Dharmendra's Project</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+
+<body>
+    <!-- Start your project here-->
+    <div class="container">
+        <div class="d-flex justify-content-center align-items-center" style="height: 80vh">
+            <br><br>
+            <div class="text-center">
+                <h5 class="mb-3">Thank you for using our Database Project. Dharmendra Welcomes you.</h5>
+                <p class="mb-3">If Don't have an account on this projoct Please register first</p>
+                <br><br>
+                <div class="container">
+                    <form class="row g-3 needs-validation" id="Login" novalidate>
+                        <div class="col-md-4">
+                            <div class="input-group form-outline">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                    aria-describedby="inputGroupPrepend" required />
+                                <label for="validationCustomUsername" class="form-label">Username</label>
+                                <div class="invalid-feedback">Please choose a username.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-outline">
+                                <input type="text" class="form-control" id="validationCustom03" required />
+                                <label for="validationCustom03" class="form-label">Password</label>
+                                <div class="invalid-feedback">Please provide a valid password.</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check text-right">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                                <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label>
+                                <div class="invalid-feedback">You must agree before submitting.</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-primary" type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <br><br><br><br><br><br>
+                <div class="container">
+                    <form class="row g-3 needs-validation" id="Regstration" novalidate>
+                        <div class="col-md-4">
+                            <div class="form-outline">
+                                <input type="text" name="name" class="form-control" id="validationCustom01" required />
+                                <label for="validationCustom01" class="form-label">Your Name</label>
+                                <div class="valid-feedback">Looks good!</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-outline">
+                                <input type="text" name="userid" class="form-control" id="validationCustom02" required />
+                                <label for="validationCustom02" class="form-label">User ID (Without Space)</label>
+                                <div class="valid-feedback">Looks good!</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group form-outline">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="email" name="email" class="form-control" id="validationCustomUsername"
+                                    aria-describedby="inputGroupPrepend" required />
+                                <label for="validationCustomUsername" class="form-label">Email</label>
+                                <div class="invalid-feedback">Please provide an email.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-outline">
+                                <input type="text" class="form-control" name="password" id="validationCustom03" required />
+                                <label for="validationCustom03" class="form-label">Password</label>
+                                <div class="invalid-feedback">Please provide a valid password.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-outline">
+                                <input type="password" class="form-control" name="confim_password" id="confirmPassword" required />
+                                <label for="validationCustom05" class="form-label">Confirm Password</label>
+                                <div class="invalid-feedback">Please provide matching password.</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check text-right">
+                                <input class="form-check-input" type="checkbox" name="agreement" id="invalidCheck" required />
+                                <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label>
+                                <div class="invalid-feedback">You must agree before submitting.</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-primary" type="submit">Process Registration</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End your project here-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-
+
+scale=1, shrink-to-fit=no">
+    <title>DK Sys</title>
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://demos.creative-
+
+tim.com/soft-ui-dashboard/assets/css/nucleo-icons.css">
+    <link rel="stylesheet" href="https://demos.creative-
+
+tim.com/soft-ui-dashboard/assets/css/nucleo-svg.css">
+    <link rel="stylesheet" href="https://demos.creative-
+
+tim.com/soft-ui-dashboard/assets/css/soft-ui-dashboard.min.css?
+
+v=1.0.2">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open
+
++Sans:300,400,600,700">
+</head>
+
+<body class="g-sidenav-show">
+
+    <div class="main-content" id="panel">
+        <div class="container-fluid pt-3">
+            <div class="row removable">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <input id="userid" class="form-control mb-4" placeholder="User ID">
+                    <input id="username" class="form-control mb-4" placeholder="Email">
+                    <input id="password" class="form-control mb-4" placeholder="Password">
+                    <input id="full_name" class="form-control mb-4" placeholder="Full Name">
+                    <div class="row removable">
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-3"><button onclick="register()" id="btn_register"
+                                class="btn btn-primary mb-4">Register</button>
+                        </div>
+                        <div class="col-lg-3"></div>
+                    </div>
+                    <input id="userid_email" class="form-control mb-4" placeholder="User ID or Email">
+                    <input id="pass" class="form-control mb-4" placeholder="User ID">
+                    <input id="otp" class="form-control mb-4" placeholder="First Time OTP">
+                    <div class="row removable">
+                        <div class="col-lg-3"><button onclick="login()" id="btn_login"class="btn btn-primary mb-4">Login</button></div>
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-3"><button onclick="loginWithOTP()" id="btn_login"class="btn btn-primary mb-4">Login With OTP</button></div>
+                        <div class="col-lg-3"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+            <div class="card p-3 mb-4">
+                <div class="overflow-hidden position-relative 
+
+border-radius-lg bg-cover h-100" style="background-image: url
+
+(https://demos.creative-tim.com/soft-ui-
+
+dashboard/assets/img/ivancik.jpg);">
+                    <span class="mask bg-gradient-dark"></span>
+                    <div class="card-body position-relative z-
+
+index-1 d-flex flex-column h-100 p-3">
+                        <h5 class="text-white font-weight-bolder 
+
+mb-4 pt-2">Output: </h5>
+                        <p id="display" class="text-white"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://demos.creative-tim.com/soft-ui-
+
+dashboard/assets/js/core/popper.min.js"></script>
+    <script src="https://demos.creative-tim.com/soft-ui-
+
+dashboard/assets/js/core/bootstrap.min.js"></script>
+    <script src="https://demos.creative-tim.com/soft-ui-
+
+dashboard/assets/js/plugins/chartjs.min.js"></script>
+    <script src="https://demos.creative-tim.com/soft-ui-
+
+dashboard/assets/js/plugins/Chart.extension.js"></script>
+    <script src="https://demos.creative-tim.com/soft-ui-
+
+dashboard/assets/js/soft-ui-dashboard.min.js?v=1.0.2"></script>
+
+
+    <script>
+
+        var api_url = "https://script.google.com/macros/s/AKfycbw7eNZRKIplWJxVgqQnNLdZ9Xp1zeP4UdiKt8KlKzlUCZeWRkjeRtBf6xDCmb1Ar3qR/exec";
+        
+
+        var userid = document.getElementById('userid');
+        var username = document.getElementById('username');
+        var password = document.getElementById('password');
+        var full_name = document.getElementById('full_name');
+
+        var userid_email = document.getElementById('userid_email');
+        var pass = document.getElementById('pass');
+        var otp = document.getElementById('otp');
+
+        var display = document.getElementById('display');
+
+        function login() {
+            var filted_url = api_url;
+            filted_url += "?username=" + userid_email.value;
+            filted_url += "&password=" + pass.value;
+            $.get(filted_url, function (data, status) {
+                display.innerText = data + " from get method";
+            });
+        }
+        function loginWithOTP(){
+            var filted_url = api_url;
+            filted_url += "?username=" + userid_email.value;
+            filted_url += "&password=" + pass.value;
+            filted_url += "&otp=" + otp.value;
+            $.get(filted_url, function (data, status) {
+                display.innerText = data + " from get method with otp";
+            });
+        }
+        function register() {
+            $.post(api_url, {
+                userid:userid.value,
+                name: full_name.value,
+                username: username.value,
+                password: password.value
+            }, function (data, status) {
+                display.innerText = data + " from post method";
+            });
+        }
+    </script>
+</body>
+
+
+</html>
